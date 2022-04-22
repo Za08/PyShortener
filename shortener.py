@@ -2,7 +2,7 @@ import base64
 
 if __name__ == "__main__":
     file_name = input("输入要混淆的文件名: ")
-    output_name = input("输入要混淆的文件名: ")
+    output_name = input("输入要输出的文件名: ")
     with open(file_name, mode="r", encoding="utf-8") as f:
         text = f.read().encode("utf-8")
     b = base64.b64encode(text)
