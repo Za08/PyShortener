@@ -8,5 +8,5 @@ if __name__ == "__main__":
         text = f.read()
     b = re.finditer(r"\".+?b[ ]*=[ ]*b'(.+?)'", text).__next__().group(1)
     code = base64.b64decode(b).decode("utf-8")
-    with open(output_name, "w") as f:
+    with open(output_name, mode="w", encoding="utf-8") as f:
         f.write(code)
